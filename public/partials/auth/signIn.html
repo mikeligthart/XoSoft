@@ -1,0 +1,32 @@
+<section>
+  <form name="signInForm"
+        ng-submit="signIn()"
+        class="form-signin"
+        novalidate>
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <div ng-show="signInForm.email.$invalid && signInForm.email.$touched" class="alert alert-danger">
+      Please enter a valid email address.
+    </div>
+    <div ng-show="signInSuccess" class="alert alert-success">{{signInSuccess}}</div>
+    <div ng-show="signInFailure" class="alert alert-danger">{{signInFailure}}</div>
+
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input name="email"
+           ng-model="authform.email"
+           ng-required="true"
+           type="email"
+           id="inputEmail"
+           class="form-control"
+           placeholder="Email address"
+           autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input ng-model="authform.password"
+           ng-required="true"
+           type="password"
+           id="inputPassword"
+           class="form-control"
+           placeholder="Password"
+           name="password">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  </form>
+</section>

@@ -1,0 +1,40 @@
+<section class="patientpage">
+  <div class="form-group">
+    <label for="search">Search:</label>
+    <input ng-model="query" type="text" class="form-control" id="search" placeholder="Search for patients" autofocus>
+  </div>
+  <div class="form-group">
+    <label for="order">Order by </label>
+    <select ng-model="patientOrder" id="order">
+      <option value="id">Id</option>
+      <option value="name">Name</option>
+      <option value="location">Location</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="ascending">Ascending</label>
+    <input id="ascending" type="radio" ng-model="direction" name="direction" checked>
+    <label for="descending">Descending</label>
+    <input id="descending" type="radio" ng-model="direction" name="direction" value="reverse">
+  </div>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="item in patients | filter: query | orderBy: patientOrder:direction">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.location}}</td>
+        <td><a href="#/details/{{item.id}}">view</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="btn btn-default" ng-click="auth.$signOut()">Sign Out</button>
+</section>

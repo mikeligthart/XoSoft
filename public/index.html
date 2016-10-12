@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="xoSoftApp">
+<head>
+  <meta charset="UTF-8">
+  <title>XoSoft Application</title>
+
+  <!-- Angular -->
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular/angular-route.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBx41x6jhTAagAruHAHw40d_36IHNGxz1c",
+      authDomain: "xosoft-b5549.firebaseapp.com",
+      databaseURL: "https://xosoft-b5549.firebaseio.com",
+      storageBucket: "xosoft-b5549.appspot.com",
+      messagingSenderId: "586852066898"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+  <!-- App code -->
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+
+  <!-- Style: bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+<!--    <input type="text" ng-model="name">
+    <h2>Welcome {{name}}</h2>-->
+
+<div class="container" ng-view></div>
+</body>
+</html>

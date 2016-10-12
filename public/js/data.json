@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "name": "Mike Ligthart",
+    "location": "Utrecht"
+  },
+  {
+    "id": 1,
+    "name": "Henk Janssen",
+    "location": "Enschede"
+  },
+  {
+    "id": 2,
+    "name": "Jan Henksen",
+    "location": "Madrid"
+  },
+  {
+    "id": 3,
+    "name": "Piet Donkers",
+    "location": "Den Haag"
+  },
+  {
+    "id": 4,
+    "name": "Robin",
+    "location": "Soesterberg"
+  }
+]

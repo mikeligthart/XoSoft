@@ -1,0 +1,11 @@
+<section class="patientinfo">
+  <div class="panel panel-default" ng-model="patient">
+    <a href="#/details/{{prevItem}}" class="btn btn-default">&lt;</a>
+    <a href="#/details/{{nextItem}}" class="btn btn-default">&gt;</a>
+    <div class="panel-heading">{{patients[whichItem].name}}</div>
+    <div class="panel-body">
+      {{patients[whichItem].location}}
+    </div>
+  </div>
+  <a href="#/list">&laquo; Back to search</a>
+</section>
